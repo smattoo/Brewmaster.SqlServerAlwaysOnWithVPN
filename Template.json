@@ -184,7 +184,7 @@
                 "VPNGatewayAddress": "{{SiteToSiteVPNIPAddress}}",
                 "AddressSpace": [
                         {% for address in addressSpacesSplit -%}
-                        "{{address}}"{% if !forloop.last -%},{% endif -%}	
+                        "{{address}}"{% if forloop.last == false -%},{% endif -%}	
                         {% endfor -%}
                 ]
             }     
@@ -220,7 +220,7 @@
                 ],
                 "VPNClientAddressSpaces": [
                         {% for address in p2sAddressSpacesSplit -%}
-                        "{{address}}"{% if !forloop.last -%},{% endif -%}	
+                        "{{address}}"{% if forloop.last == false -%},{% endif -%}	
                         {% endfor -%}
                 ],
                 "LocalSiteRefConnection": "{{VnetName}}-LocalNetwork"
