@@ -19,6 +19,12 @@
             "Name": "VnetName",
             "Type": "String",
             "Description": "Azure Virtual Network for setting up SQL Server Availability Group."
+        },        
+        {
+            "Name": "ReservedIP",
+            "Type": "String",
+            "TypeHint": "AzureReservedIPName",
+            "Description": "Reserved ip for sql."             
         },
         {
             "Name": "PointToSiteVPNAddressSpace",
